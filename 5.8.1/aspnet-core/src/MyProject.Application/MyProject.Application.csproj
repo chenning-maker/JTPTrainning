@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionPrefix>1.0.0.0</VersionPrefix>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>MyProject.Application</AssemblyName>
+    <PackageId>MyProject.Application</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>MyProject</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="新文件夹1\**" />
+    <Compile Remove="新文件夹2\**" />
+    <EmbeddedResource Remove="新文件夹1\**" />
+    <EmbeddedResource Remove="新文件夹2\**" />
+    <None Remove="新文件夹1\**" />
+    <None Remove="新文件夹2\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyProject.Core\MyProject.Core.csproj" />
+  </ItemGroup>
+</Project>
